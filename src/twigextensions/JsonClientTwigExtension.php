@@ -4,14 +4,10 @@ namespace dolphiq\jsonclient\twigextensions;
 
 use dolphiq\jsonclient\jsonclient;
 
-use Twig_Extension;
-use Twig_SimpleFilter;
-use Twig_SimpleFunction;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-use Craft;
-use ReflectionProperty;
-
-class JsonClientTwigExtension extends Twig_Extension
+class JsonClientTwigExtension extends AbstractExtension
 {
 
     static $manifestObject = null;
@@ -29,7 +25,7 @@ class JsonClientTwigExtension extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction('fetchJson', [$this, 'fetchJson']),
+            new TwigFilter('fetchJson', [$this, 'fetchJson']),
         ];
     }
 
@@ -45,28 +41,25 @@ class JsonClientTwigExtension extends Twig_Extension
         // return 'twitter feed...';
 
         if (!isset($options['url'])) {
-          die('Required url parameter not set!');
+            die('Required url parameter not set!');
         }
 
         $data = self::getUrl($options['url']);
 
         return json_decode($data, true);
-
     }
 
-		// Function for cURL
-		private static function getUrl($url) {
-			error_reporting(0);
+    // Function for cURL
+    private static function getUrl($url)
+    {
+        error_reporting(0);
 
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			$store = curl_exec($ch);
-			curl_close($ch);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $store = curl_exec($ch);
+        curl_close($ch);
 
-			return $store;
-		}
-
-
-
+        return $store;
+    }
 }
