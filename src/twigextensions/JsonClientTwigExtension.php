@@ -2,10 +2,8 @@
 
 namespace dolphiq\jsonclient\twigextensions;
 
-use dolphiq\jsonclient\jsonclient;
-
 use Twig\Extension\AbstractExtension;
-use Twig\TwigFilter;
+use Twig\TwigFunction;
 
 class JsonClientTwigExtension extends AbstractExtension
 {
@@ -25,7 +23,7 @@ class JsonClientTwigExtension extends AbstractExtension
     public function getFunctions()
     {
         return [
-            new TwigFilter('fetchJson', [$this, 'fetchJson']),
+            new TwigFunction('fetchJson', [$this, 'fetchJson']),
         ];
     }
 
