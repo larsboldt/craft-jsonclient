@@ -1,45 +1,45 @@
 {
-    "name": "dolphiq/jsonclient",
-    "description": "Simple Json client plugin for Craft3 CMS. The plugin provides a simple Twig extension which allows you to fetch a Json url and return it to your Twig template.",
-    "type": "craft-plugin",
-    "version": "1.0.1",
-    "keywords": [
-        "craft",
-        "cms",
-        "craftcms",
-        "craft-plugin",
-        "json",
-        "jsonclient",
-        "twig",
-        "craft3"
-    ],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Johan Zandstra",
-            "email": "info@dolphiq.nl",
-            "homepage": "https://dolphiq.nl/"
-        }
-    ],
-    "require": {
-        "craftcms/cms": "~3.0.0-beta.1"
-    },
-    "autoload": {
-        "psr-4": {
-          "dolphiq\\jsonclient\\": "src/"
-        }
-    },
-    "extra": {
-        "name": "Json Client",
-        "handle": "jsonclient",
-        "schemaVersion": "1.0.0",
-        "developer": "Dolphiq",
-        "developerUrl": "https://dolphiq.nl/",
-        "description": "Simple Json client plugin for Craft3 CMS. The plugin provides a simple Twig extension which allows you to fetch a Json url and return it to your Twig template.",
-        "hasCpSettings": false,
-        "hasCpSection": false,
-        "documentationUrl": "https://github.com/Dolphiq/craft3-jsonclient/blob/master/README.md",
-        "changelogUrl": "https://github.com/Dolphiq/craft3-jsonclient/blob/master/CHANGELOG.md",
-        "class": "dolphiq\\jsonclient\\JsonClientPlugin"
+  "name": "dolphiq/jsonclient",
+  "description": "Simple Json client plugin for Craft CMS. The plugin provides a simple Twig extension which allows you to fetch a Json url and return it to your Twig template.",
+  "type": "craft-plugin",
+  "version": "2.0.0",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "json",
+    "jsonclient",
+    "twig",
+    "craft"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Johan Zandstra",
+      "email": "info@dolphiq.nl",
+      "homepage": "https://dolphiq.nl/"
     }
+  ],
+  "require": {
+    "craftcms/cms": "~4.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "dolphiq\\jsonclient\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Json Client",
+    "handle": "jsonclient",
+    "schemaVersion": "1.0.0",
+    "developer": "Dolphiq",
+    "developerUrl": "https://dolphiq.nl/",
+    "description": "Simple Json client plugin for Craft CMS. The plugin provides a simple Twig extension which allows you to fetch a Json url and return it to your Twig template.",
+    "hasCpSettings": false,
+    "hasCpSection": false,
+    "documentationUrl": "https://github.com/larsboldt/craft-jsonclient/blob/master/README.md",
+    "changelogUrl": "https://github.com/larsboldt/craft-jsonclient/blob/master/CHANGELOG.md",
+    "class": "dolphiq\\jsonclient\\JsonClientPlugin"
+  }
 }
