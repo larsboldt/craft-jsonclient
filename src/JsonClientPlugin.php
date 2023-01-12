@@ -11,14 +11,7 @@
 namespace dolphiq\jsonclient;
 
 use Craft;
-use craft\base\Plugin;
 use dolphiq\jsonclient\twigextensions\JsonClientTwigExtension;
-
-
-// use dolphiq\jsonclient\controllers\jsonclientController;
-
-
-use craft\base\Object;
 
 class JsonClientPlugin extends \craft\base\Plugin
 {
