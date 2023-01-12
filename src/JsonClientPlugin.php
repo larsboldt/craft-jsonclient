@@ -17,10 +17,10 @@ class JsonClientPlugin extends \craft\base\Plugin
 {
     public static $plugin;
 
-    public $hasCpSettings = false;
+    public bool $hasCpSettings = false;
 
     // table schema version
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     public function init()
     {
